@@ -256,81 +256,82 @@ Flag: pwn.college{c77SEwUx_y-HHKccJUYGI5hj79H.QX4EDO0wSM2QjM1EzW}
 Solution: /challenge/run > /tmp/data.txt; grep pwn /tmp/data.txt
 
 ### Grepping Live Output
-Flag: 
+Flag: pwn.college{cBvxTKfvbt0KNNHFAqs5gfckDgf.QX5EDO0wSM2QjM1EzW}
 
-Solution: I piped live command output into grep and found the flag.
+Solution: I piped live command output into grep /challenge/run | grep pwn
 
 ### Grepping Errors
-Flag: 
+Flag: pwn.college{wsK4e98fuXeZrhL52ZoeCs3VYMX.QX1ATO0wSM2QjM1EzW}
 
-Solution: I redirected stderr to stdout using 2>&1 and piped it into grep to get the flag.
+Solution: I redirected stderr to stdout using 2>&1 and piped it into grep /challenge/run 2>&1 | grep pwn
 
 ### Filtering with grep -v
-Flag: 
+Flag: pwn.college{IttA9Lun7uOL2xmqNWyYbmLOQ-u.0FOxEzNxwSM2QjM1EzW}
 
-Solution: I used grep -v to exclude unwanted lines and reveal the flag.
+Solution: I used grep -v to exclude unwanted lines /challenge/run | grep -v DECOY
 
 ### Filtering with sed
-Flag: 
+Flag: pwn.college{I_D-eMx7q3DMo5KMJrcMqnFGLb4.01NxQTMywSM2QjM1EzW}
 
-Solution: I filtered and modified text output using sed and extracted the flag.
+Solution: I filtered and modified text output using sed /challenge/run | sed 's/FAKEFLAG//g'
 
 ### Duplicating Piped Data with tee
+Flag: pwn.college{k8vLN-MK4GrK_eTUoINtK1l_BbW.QXxITO0wSM2QjM1EzW}
 
-Flag: 
-Solution: I used tee to send piped output to both a file and the terminal and got the flag.
+Solution: I used tee to send piped output to both a file and the terminal, /challenge/pwn | tee intercepted_output | /challenge/college
 
 ### Process Substitution for Input
-Flag: 
+Flag: pwn.college{UBTJB7VUAyqpd6klazDIUmXhPb6.0lNwMDOxwSM2QjM1EzW}
 
-Solution: I used process substitution <(command) to pass command output as input and obtained the flag.
+Solution: I used process substitution <(command) to pass command output as input diff <(/challenge/print_decoys) <(/challenge/print_decoys_and_flag)
 
 ### Writing to Multiple Programs
-Flag: 
+Flag: pwn.college{IFHhNp1jNupXz1gLzXEz2uN6LCx.QXwgDN1wSM2QjM1EzW}
 
-Solution: I used tee with process substitution to write output to multiple programs and got the flag.
+Solution: I used tee with process substitution to write output to multiple programs /challenge/hack | tee >( /challenge/the ) >( /challenge/planet )
 
 ### Split-piping stderr and stdout
-Flag: 
+Flag: pwn.college{gn-gibjQ2fDWoD3RtEnhBk3WNho.QXxQDM2wSM2QjM1EzW}
 
-Solution: I separated standard output and error streams and successfully retrieved the flag.
+Solution: I separated standard output and error streams /challenge/hack \ > >( /challenge/planet ) \ 2> >( /challenge/the )
 
 ### Named Pipes
-Flag: 
+Flag: pwn.college{oCaMDYH_viQgEfZz8TW_Wl7E_G2.01MzMDOxwSM2QjM1EzW}
 
-Solution: I created a named pipe using mkfifo, passed data through it, and received the flag.
+Solution: I created a named pipe using mkfifo, passed data through it. mkfifo /tmp/flag_fifo
+
 
 # Module 7: Shell Variables 
 
 ### Printing Variables
-Flag: 
+Flag: pwn.college{wopHK5-NSOvapKezQpvDP-U84K4.QX3UTN0wSM2QjM1EzW}
 
-Solution: I used echo $VARIABLE to print the value of a variable and received the flag.
+Solution: I used echo $FLAG to print the value of a variable
 
 ### Setting Variables
-Flag: 
+Flag: pwn.college{sc4RlzBIM1yTMWuB2ecRq5N-MTZ.QX5UTN0wSM2QjM1EzW}
 
-Solution: I assigned a value to a variable using VARIABLE=value and got the flag.
+Solution: I assigned a value to a variable using PWN=COLLEGE
 
 ### Multi-word Variables
-Flag: 
+Flag: pwn.college{wcNUeV7WOg-C430w3DzpFMGAHFd.QXwYTN0wSM2QjM1EzW}
 
-Solution: I set a variable containing multiple words using quotes and retrieved the flag.
+Solution: I set a variable containing multiple words using quotes PWN="COLLEGE YEAH"
 
 ### Exporting Variables
-Flag: 
+Flag: pwn.college{Ys-Nbpi3Q3ANeAwGLAwc3Z3i08E.QXyYTN0wSM2QjM1EzW}
 
-Solution: I exported a variable using export VARIABLE=value and obtained the flag.
+Solution: I exported a variable using PWN=COLLEGE; COLLEGE=PWN; export PWN; sh; /challenge/run PWN
 
 ### Printing Exported Variables
-Flag: 
+Flag: pwn.college{U_Xo5S4My69nlNwiIO5JtJiXJYp.QX4UTN0wSM2QjM1EzW}
 
-Solution: I printed an exported variable in a child shell and received the flag.
+Solution: I printed an exported variable in a child shell using 'env'
 
 ### Storing Command Output
-Flag: 
+Flag: pwn.college{cz7F6VJqUojvhAk93wh-hidsAVz.QX1cDN1wSM2QjM1EzW}
 
-Solution: I stored command output in a variable using $(command) and got the flag.
+Solution: I stored command output in a variable using PWN=$(/challenge/run); echo $PWN
 
 ### Reading Input
 Flag: 
