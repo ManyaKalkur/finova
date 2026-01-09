@@ -334,14 +334,14 @@ Flag: pwn.college{cz7F6VJqUojvhAk93wh-hidsAVz.QX1cDN1wSM2QjM1EzW}
 Solution: I stored command output in a variable using PWN=$(/challenge/run); echo $PWN
 
 ### Reading Input
-Flag: 
+Flag: pwn.college{sq45itQLOlQHMJEp31ogo-EHh30.QX4cTN0wSM2QjM1EzW}
 
-Solution: I used the read command to accept user input and retrieved the flag.
+Solution: I used the read command to accept user input read -p "INPUT:" PWN
 
 ### Reading Files
-Flag: 
+Flag: pwn.college{Y8RjI7MdBuJLzlnLY3s1gEEpOnx.QXwIDO0wSM2QjM1EzW}
 
-Solution: I read file contents using shell input techniques and obtained the flag.
+Solution: I read file contents using shell input techniques read PWN < /challenge/read_me
 
 # Module 8: Data Manipulation
 
@@ -430,24 +430,24 @@ Solution: I checked the exit status of a process and used it to complete the cha
 # Module 10: Untangling Users
 
 ### Becoming root with su
-Flag: 
+Flag: pwn.college{QyAhPTVWC1PQ3CdH0xKfws9JKnt.QX1UDN1wSM2QjM1EzW}
 
-Solution: I used the `su` command to switch to the root user by providing the correct root password and obtained the flag.
+Solution: I used the `su` command to switch to the root user by providing the correct root password
 
 ### Other users with su
-Flag: 
+Flag: pwn.college{g0SSoxIK4bmMcuKcw2Q4cOXkRy7.QX2UDN1wSM2QjM1EzW}
 
-Solution: I used `su <username>` to switch to another user account and explored their environment to find the flag.
+Solution: I used `su zardus` to switch to another user account
 
 ### Cracking passwords
-Flag: 
+Flag: pwn.college{soxzh17mJY33y6UaFWuU1pgaqBF.QX3UDN1wSM2QjM1EzW}
 
-Solution: I cracked the password using the provided password hash and then logged in as the user to retrieve the flag.
+Solution: I cracked the password using the provided password hash and then logged in as the user john /challenge/shadow-leak; john --show /challenge/shadow-leak; su zardus; /challenge/run
 
 ### Using sudo
-Flag: 
+Flag: pwn.college{wz22vfIAPTJp6bWJpBGW9jCTdQR.QX4UDN1wSM2QjM1EzW}
 
-Solution: I checked sudo permissions with `sudo -l`, executed the allowed command with sudo privileges, and found the flag.
+Solution: I executed the allowed command with sudo privileges sudo cat /flag
 
 # Module 11: Perceiving Permissions
 
