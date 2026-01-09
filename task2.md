@@ -170,3 +170,55 @@ Solution: I used the provided helper option /challenge/challenge -p to get a val
 Flag: pwn.college{AVRRF62efe_MVjcSGaEaJOjIhRU.QX0ETO0wSM2QjM1EzW}
 
 Solution: I used the help challenge to find the secret value and then challenge --secret AVRRF62e
+
+# File Globbing
+
+### Matching by *
+Flag: pwn.college{wLTIfy4xpdiQ-azckOl7FIlf0Ni.QXxIDO0wSM2QjM1EzW}
+
+Solution: I used cd /ch* to go to challenge directory, and ran /challenge/run
+
+### Matching with ?
+Flag: pwn.college{0MgtS4DK-V0JTAyNIvzB3fEsRRS.QXyIDO0wSM2QjM1EzW}
+
+Solution: I used cd /?ha??enge to change directories and ran /challenge/run
+
+### Matching with []
+Flag: pwn.college{Ux2-4TNW3NXSUIDafluj3qS4Mcx.QXzIDO0wSM2QjM1EzW}
+
+Solution: I used square brackets to match specific characters /challenge/run file_[bash] and passed the file to /challenge/run
+
+### Matching paths with []
+Flag: pwn.college{0U0pSZeEnz4Ru-29fcI0WNdCKSy.QX0IDO0wSM2QjM1EzW}
+
+Solution: I used square brackets directly in the path argument /challenge/run /challenge/files/file_[bash]
+
+### Multiple Globs
+Flag: pwn.college{kgDQmUVUcATh4WUT7gUbIfneopk.0lM3kjNxwSM2QjM1EzW}
+
+Solution: I used multiple * in a single command /challenge/run *p* to match several files
+
+### Mixing Globs
+Flag: pwn.college{AKJF6xdBccX1ns9WQ5sphOGL7RU.QX1IDO0wSM2QjM1EzW}
+
+Solution: I combined character classes /challenge/run [cep]* to match the correct files
+
+### Exclusionary Globbing
+Flag: pwn.college{08kksyOGMusdnWvgMhaawSKX3rx.QX2IDO0wSM2QjM1EzW}
+
+Solution: I used exclusionary globbing /challenge/run [^pwn]* to avoid unwanted matches and retrieve the flag.
+
+### Tab Completion
+Flag: pwn.college{YddPH5snywKv5BHg6WmM5E4zN5L.0FN0EzNxwSM2QjM1EzW}
+
+Solution: I used the Tab key to auto-complete cat /challenge/pwncollege
+
+### Multiple Options for Tab Completion
+Flag: 
+
+Solution: I pressed Tab twice to view available completion options and selected the correct one.
+
+### Tab Completion on Commands
+Flag: 
+
+Solution: I used tab completion to complete the challenge command and retrieve the flag.
