@@ -1,21 +1,21 @@
 # Module 1: Hello Hackers
 
-## Intro To Commands
+### Intro To Commands
 Flag: pwn.college{U8pzSLSAGSefgCiDojrtzD6WjfO.QX3YjM1wSM2QjM1EzW}
 
 Solution: I typed 'hello' in the terminal and got the flag.
 
-## Intro To Arguments
+### Intro To Arguments
 Flag: pwn.college{EsVJGn-bSJJ1JRR6JfzkHBL1Kx5.0lNzEzNxwSM2QjM1EzW}
 
 Solution: I typed 'hello hackers' in the terminal and got the flag.
 
-## Command History
+### Command History
 Flag: pwn.college{EsVJGn-bSJJ1JRR6JfzkHBL1Kx5.0lNzEzNxwSM2QjM1EzW}
 
 Solution: I used the up arrow in the terminal to view previous commands and found the flag.
 
-## Module 2: Pondering Paths
+# Module 2: Pondering Paths
 
 ### The Root
 Flag: pwn.college{QAPL72hLjTEZta7yesIbBlk30cF.QX4cTO0wSM2QjM1EzW}
@@ -57,7 +57,7 @@ Flag: pwn.college{IVOkigYmw3MHbuRABoNH43MD4Sd.QXzMDO0wSM2QjM1EzW}
 
 Solution: I ran /challenge/run ~/h using the home directory shortcut.
 
-## Module 3: Comprehending Commands
+# Module 3: Comprehending Commands
 
 ### cat: not the pet, but the command!
 Flag: pwn.college{ES-YIPmf2elEKgDHn_ojoboynyt.QXxcTN0wSM2QjM1EzW}
@@ -134,3 +134,39 @@ Flag: pwn.college{YKesl7duJOimUqxDCqxEeWQD4-6.QX5ETN1wSM2QjM1EzW}
 
 Solution: I created a symbolic link using ln -s /flag /home/hacker/not-the-flag and accessed the flag.
 
+# Module 4: Digesting Documentation
+
+### Learning from Documentation
+Flag: pwn.college{E7IRkQ-snyBmJzYyeVhC2C_LpVq.QX0ITO0wSM2QjM1EzW}
+
+Solution: I ran /challenge/challenge --giveflag
+
+### Learning Complex Usage
+Flag: pwn.college{0oSLNHjEB8gYg4HnwgJOY1J2iwc.QX1ITO0wSM2QjM1EzW}
+
+Solution: I ran /challenge/challenge --printfile /flag
+
+### Reading Manuals
+Flag: pwn.college{U-GtSS2ny2361WC477emC-wjWZY.QX0EDO0wSM2QjM1EzW}
+
+Solution: I checked the manual page and ran /challenge/challenge --tnyemw 223
+
+### Searching Manuals
+Flag: pwn.college{QdvrGwDv1QVuh_cXxoVptlJjFL5.QX1EDO0wSM2QjM1EzW}
+
+Solution: I searched the manual for flag-related information and ran /challenge/challenge --mtspsh
+
+### Searching for Manuals
+Flag: pwn.college{Y_72aFG3dLAogb_Flln6df8EL-_.QX2EDO0wSM2QjM1EzW}
+
+Solution: I searched available manuals using man man, found the correct option man -k challenge, and ran the challenge command.
+
+### Helpful Programs
+Flag: pwn.college{QiUiPxBzoQJ3i9jPbu5-nEYg4nL.QX3IDO0wSM2QjM1EzW}
+
+Solution: I used the provided helper option /challenge/challenge -p to get a value and then /challenge/challenge -g 395
+
+### Help for Builtins
+Flag: pwn.college{AVRRF62efe_MVjcSGaEaJOjIhRU.QX0ETO0wSM2QjM1EzW}
+
+Solution: I used the help challenge to find the secret value and then challenge --secret AVRRF62e
