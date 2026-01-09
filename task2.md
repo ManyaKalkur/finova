@@ -171,7 +171,7 @@ Flag: pwn.college{AVRRF62efe_MVjcSGaEaJOjIhRU.QX0ETO0wSM2QjM1EzW}
 
 Solution: I used the help challenge to find the secret value and then challenge --secret AVRRF62e
 
-# File Globbing
+# Module 5: File Globbing
 
 ### Matching by *
 Flag: pwn.college{wLTIfy4xpdiQ-azckOl7FIlf0Ni.QXxIDO0wSM2QjM1EzW}
@@ -346,61 +346,61 @@ Solution: I read file contents using shell input techniques read PWN < /challeng
 # Module 8: Data Manipulation
 
 ### Translating Characters
-Flag: 
+Flag: pwn.college{oTCE2-jWuNBxGNsUbR3VWdxjfE6.01MxEzNxwSM2QjM1EzW}
 
-Solution: I used the tr command to translate characters in the input and received the flag.
+Solution: I used the tr command to translate characters in the input /challenge/run | tr 'a-zA-Z' 'A-Za-z'
 
 ### Deleting Characters
-Flag: 
+Flag: pwn.college{0r4SeIpVPqGGOZ45R-ULk0IPHvQ.0FNxEzNxwSM2QjM1EzW}
 
-Solution: I used tr -d to delete specific characters from the input and got the flag.
+Solution: I used tr -d to delete specific characters: /challenge/run | tr -d '^%'
 
 ### Deleting Newlines
-Flag: 
+Flag: pwn.college{4fCQBiHmKro1mufmoKGj_F3gevU.0VNxEzNxwSM2QjM1EzW}
 
-Solution: I used tr -d '\n' to remove newlines from the output and retrieved the flag.
+Solution: I used tr -d '\n' to remove newlines from the output: /challenge/run | tr -d '\n'
 
 ### Extracting the First Lines with head
-Flag: 
+Flag: pwn.college{cyAxAPsC1BNGotOWg-4b7fr1oEi.0lNxEzNxwSM2QjM1EzW}
 
-Solution: I used the head command to extract the first lines of text and obtained the flag.
+Solution: I used the head command to extract the first lines of text: /challenge/pwn | head -n 7 | /challenge/college
 
 ### Extracting Specific Sections of Text
-Flag: 
+Flag: pwn.college{Y8rM3iy0f8_dm9kQjIS-mS_V3Sg.01NxEzNxwSM2QjM1EzW}
 
-Solution: I used text‑processing tools to extract specific sections from the input and got the flag.
+Solution: I used text‑processing tools to extract specific sections from the input:/challenge/run | cut -d' ' -f2 | tr -d '\n'
 
 ### Sorting Data
-Flag: 
+Flag: pwn.college{80-QzsBJ54tpZ5gjhIjEBSi9IHK.0FM0MDOxwSM2QjM1EzW}
 
-Solution: I used the sort command to organize data and received the flag
+Solution: I used the sort command to organize data: sort /challenge/flags.txt | tail -n 1
 
 # Module 9: Processes and Jobs
 
 ### Listing Processes
-Flag:
+Flag: pwn.college{08xNhENxvB52ZHigothhze132Cb.QX4MDO0wSM2QjM1EzW}
 
-Solution: I listed running processes using process‑listing commands and identified the required process.
+Solution: I listed running processes using process‑listing commands: ps -ef; /challenge/10386-run-15051
 
 ### Killing Processes
-Flag:
+Flag: pwn.college{EJ8B_WmMcLpLuUeekMqjThoko8C.QXyQDO0wSM2QjM1EzW}
 
-Solution: I terminated a process using its process ID and completed the challenge.
+Solution: I terminated a process using its process ID: ps -e | grep sleep; kill 139
 
 ### Interrupting Processes
-Flag:
+Flag: pwn.college{4uJoF05pVMrBrwJTyphZZVNdy9z.QXzQDO0wSM2QjM1EzW}
 
-Solution: I interrupted a running process using a keyboard signal and proceeded to get the result.
+Solution: I interrupted a running process using a CTRL+C
 
 ### Killing Misbehaving Processes
-Flag:
+Flag: 
 
 Solution: I forcefully killed an unresponsive process and completed the task.
 
 ### Suspending Processes
-Flag:
+Flag: pwn.college{cBrgT8Oqk9XOE4qPlxCvxmInTIz.QX1QDO0wSM2QjM1EzW}
 
-Solution: I suspended a running process and verified its stopped state.
+Solution: I suspended a running process and verified its stopped state: /challenge/run; Ctrl-Z; /challenge/run
 
 ### Resuming Processes
 Flag:
@@ -588,26 +588,27 @@ Solution: I switched between tmux windows using key bindings and accessed the wi
 # Module 14: Pondering PATH
 
 ### The PATH Variable
-Flag: 
+Flag: pwn.college{kxVpQj8GDKFWEkuttwqQ6ehbJuV.QX2cDM1wSM2QjM1EzW}
 
-Solution: I viewed the current PATH variable using `echo $PATH` and understood how command locations are resolved to obtain the flag.
+Solution: PATH= /challenge/run
 
 ### Setting PATH
-Flag: 
+Flag: pwn.college{sI1EZQwF3epQXBd7mZhVWeCno2c.QX1cjM1wSM2QjM1EzW}
 
-Solution: I modified the PATH variable to include a new directory and then ran the required command to retrieve the flag.
+Solution: I modified the PATH variable to include a directory PATH=/challenge/more_commands /challenge/run
 
 ### Finding Commands
-Flag: 
+Flag: pwn.college{cCh7I1Xaft6xPIkvws4tBX1T5fG.01NzEzNxwSM2QjM1EzW}
 
-Solution: I used `which` and `whereis` to locate the command’s binary and accessed it to get the flag.
+Solution: I used `which win` to locate the command’s binary and accessed it cat /challenge/paths/4239/flag
 
 ### Adding Commands
-Flag: 
+Flag: pwn.college{MiaPYT4zYSS1Firq9cdAoSyp4KE.QX2cjM1wSM2QjM1EzW}
 
-Solution: I created a new executable file in a directory included in PATH and executed it to obtain the flag.
+Solution: I created a new executable file in a directory included in PATH and executed it  mkdir /tmp/mybin; nano /tmp/mybin/win; chmod +x /tmp/mybin/win; PATH=/tmp/mybin:$PATH /challenge/run
 
 ### Hijacking Commands
-Flag: 
+Flag: pwn.college{8oHvBh7pcqqe8Q60RyjJpmic4R9.QX3cjM1wSM2QjM1EzW}
 
-Solution: I placed a malicious script earlier in the PATH to hijack the command execution and retrieved the flag.
+Solution: I placed a fake script in the PATH mkdir /tmp/mybin; nano /tmp/mybin/win; chmod +x /tmp/mybin/win; PATH=/tmp/mybin:$PATH /challenge/run
+
