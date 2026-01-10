@@ -393,9 +393,9 @@ Flag: pwn.college{4uJoF05pVMrBrwJTyphZZVNdy9z.QXzQDO0wSM2QjM1EzW}
 Solution: I interrupted a running process using a CTRL+C
 
 ### Killing Misbehaving Processes
-Flag: 
+Flag: pwn.college{YhtTFocYAgQMbnU9dlS10Oj4Dc2.0FNzMDOxwSM2QjM1EzW}
 
-Solution: I forcefully killed an unresponsive process and completed the task.
+Solution: I forcefully killed an unresponsive process: ps aux | grep /challenge/decoy
 
 ### Suspending Processes
 Flag: pwn.college{cBrgT8Oqk9XOE4qPlxCvxmInTIz.QX1QDO0wSM2QjM1EzW}
@@ -403,29 +403,29 @@ Flag: pwn.college{cBrgT8Oqk9XOE4qPlxCvxmInTIz.QX1QDO0wSM2QjM1EzW}
 Solution: I suspended a running process and verified its stopped state: /challenge/run; Ctrl-Z; /challenge/run
 
 ### Resuming Processes
-Flag:
+Flag: pwn.college{kZIq1_-a-9HrCisIa7okWfnDfN8.QX2QDO0wSM2QjM1EzW}
 
-Solution: I resumed a suspended process and confirmed it continued execution.
+Solution: I resumed a suspended process and confirmed it: /challenge/run; Ctrl-Z; fg
 
 ### Backgrounding Processes
-Flag:
+Flag: pwn.college{cMyATfBI1VVgTkIJy8qRpiBVTB8.QX3QDO0wSM2QjM1EzW}
 
-Solution: I moved a running process to the background and completed the challenge.
+Solution: I moved a running process to the background: /challenge/run; Ctrl-Z; bg; /challenge/run
 
 ### Foregrounding Processes
-Flag:
+Flag: pwn.college{owNW4DKS1RIOkaKMCT78SOUOGEK.QX4QDO0wSM2QjM1EzW}
 
-Solution: I brought a background process back to the foreground successfully.
+Solution: I brought a background process back to the foreground: /challenge/run; Ctrl-Z; bg; fg
 
 ### Starting Backgrounded Processes
-Flag:
+Flag: pwn.college{sH3LUGeV9v9wt1zxAbLJZgY90JD.QX5QDO0wSM2QjM1EzW}
 
-Solution: I started a process directly in the background and verified it was running.
+Solution: I started a process directly in the background:/challenge/run &
 
 ### Process Exit Codes
-Flag:
+Flag: pwn.college{Qa8Ld3KDWr6uG_UFjDInnM4yXi2.QX5YDO1wSM2QjM1EzW}
 
-Solution: I checked the exit status of a process and used it to complete the challenge.
+Solution: I checked the exit status of a process and used it: /challenge/get-code; echo $?; /challenge/submit-code 205
 
 # Module 10: Untangling Users
 
