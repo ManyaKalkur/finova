@@ -548,51 +548,55 @@ Solution: I used nano /home/hacker/solve.sh;chmod +x /home/hacker/solve.sh; /cha
 
 
 ### Scripting with Default Cases
-Flag: 
+Flag: pwn.college{cKI72ABYS3W9QZzrcbki4dgBrC3.01NzMDOxwSM2QjM1EzW}
 
-Solution: I used a `case` statement with a default option to handle unexpected input and retrieved the flag.
+Solution: I used nano /home/hacker/solve.sh; chmod +x /home/hacker/solve.sh; /challenge/run
+<img width="210" height="132" alt="image" src="https://github.com/user-attachments/assets/231058d6-4880-476a-893d-3a3b85cdbb90" />
+
 
 ### Scripting with Multiple Conditions
-Flag: 
+Flag: pwn.college{sGRiSBfEmh7elrRjDbP05ep62my.0FOzMDOxwSM2QjM1EzW}
 
-Solution: I combined multiple conditions using logical operators in the script and obtained the flag.
+Solution: I combined multiple conditions using logical operators in the script
+<img width="252" height="183" alt="image" src="https://github.com/user-attachments/assets/171120bf-0182-4e91-9fb9-06d6e04c9811" />
+
 
 ### Reading Shell Scripts
-Flag: 
+Flag: pwn.college{spUBMRzMZC2uXxqjRhVg81LRy19.0lMwgDOxwSM2QjM1EzW}
 
-Solution: I read and analyzed the provided shell script to understand its behavior and locate the flag.
+Solution: I read the provided shell script using cat /challenge/run
 
 # Module 13: Terminal Multiplexing
 
 ### Launching Screen
-Flag: 
+Flag: pwn.college{Ii5EQdTTM84mspWNp_K0HzBTzc_.0VN4IDOxwSM2QjM1EzW}
 
-Solution: I launched a new screen session using the `screen` command and accessed the environment to retrieve the flag.
+Solution: I launched a new screen session using the `screen` command
 
 ### Detaching and Attaching
-Flag: 
+Flag: pwn.college{EHpxeAZSxHcL0QceNJKKx-KfUP4.0lN4IDOxwSM2QjM1EzW}
 
-Solution: I detached from the screen session using the detach shortcut and reattached to it later to find the flag.
+Solution: I detached from the screen session using the Ctrl+A and d and reattached to it using screen -r
 
 ### Finding Sessions
-Flag: 
+Flag: pwn.college{M1GQmWpcNf079mUUjhzvMzY1o2_.01N4IDOxwSM2QjM1EzW}
 
-Solution: I listed active screen sessions using `screen -ls`, reattached to the correct one, and obtained the flag.
+Solution: I listed active screen sessions using `screen -ls`
 
 ### Switching Windows
-Flag: 
+Flag: pwn.college{kjH1SiP6GJsYtqKsZPIFS5o-_tm.0FO4IDOxwSM2QjM1EzW}
 
-Solution: I switched between different windows inside the screen session and located the flag.
+Solution: I switched between different windows inside the screen session using Ctrl+A
 
 ### Detaching and Attaching (tmux)
-Flag: 
+Flag: pwn.college{YmWMC5bb9cVGNWioDVNF77r1hr0.0VO4IDOxwSM2QjM1EzW}
 
-Solution: I detached from a tmux session and reattached to it using tmux commands to retrieve the flag.
+Solution: I detached from a tmux session using Ctrl+B and d reattached to it using tmux+a
 
 ### Switching Windows (tmux)
-Flag: 
+Flag: pwn.college{cz_YjQ3qOwnijL8YiCwckLqub-q.0FM5IDOxwSM2QjM1EzW}
 
-Solution: I switched between tmux windows using key bindings and accessed the window containing the flag.
+Solution: I switched between tmux windows using Ctrl+B
 
 # Module 14: Pondering PATH
 
