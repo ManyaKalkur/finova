@@ -452,66 +452,69 @@ Solution: I executed the allowed command with sudo privileges sudo cat /flag
 # Module 11: Perceiving Permissions
 
 ### Changing File Ownership
-Flag: 
+Flag: pwn.college{AMVctAWcIzohfUTXJ4GCWRvjrKy.QXxEjN0wSM2QjM1EzW}
 
-Solution: I used the `chown` command to change the owner of the file and then accessed it to obtain the flag.
+Solution: I used the `chown` command to change the owner of the file and then accessed it: chown hacker /flag; cat /flag
 
 ### Groups and Files
-Flag: 
+Flag: pwn.college{A-3sACG-MzIufGzkuzEsw4uCNeD.QXxcjM1wSM2QjM1EzW}
 
-Solution: I checked the file’s group ownership using `ls -l`, switched to the correct group, and found the flag.
+Solution: I changed the file’s group ownership using chgrp hacker /flag; cat /flag
 
 ### Fun With Group Names
-Flag: 
+Flag: pwn.college{IUY10P0s0leDOAAn-UhgXMgMYJr.QXycjM1wSM2QjM1EzW}
 
-Solution: I identified the correct group name, changed the file’s group using `chgrp`, and accessed the file to get the flag.
+Solution: I identified the correct group name, changed the file’s group using `chgrp`, and accessed the file: id; chgrp grp22868 /flag; cat /flag
 
 ### Changing Permissions
-Flag: 
+Flag: pwn.college{Q2UcW-tRDtQueD7B4QQXZevibUA.QXzcjM1wSM2QjM1EzW}
 
-Solution: I modified the file permissions using `chmod` to allow access and retrieved the flag.
+Solution: I modified the file permissions using `chmod` to allow access: chmod a+r /flag; cat /flag
 
 ### Executable Files
-Flag: 
+Flag: pwn.college{YkE59sBuISk0Lw6C9C9D0Nm2-7x.QXyEjN0wSM2QjM1EzW}
 
-Solution: I added execute permissions to the file using `chmod +x`, ran the file, and obtained the flag.
+Solution: I added execute permissions to the file using `chmod +x`: chmod a+x /challenge/run; /challenge/run
 
 ### Permission Tweaking Practice
-Flag: 
+Flag: pwn.college{8pF1p33i6JG4p46KaLfQ4JqFnEM.QXwEjN0wSM2QjM1EzW}
 
-Solution: I adjusted the permissions step by step as required until I was able to read the file and get the flag.
+Solution: I adjusted the permissions step by step as required until I was able to read the file.
 
 ### Permissions Setting Practice
-Flag: 
+Flag: pwn.college{scv8gA60opabLp3eyIs1DjZ8OUp.QXzETO0wSM2QjM1EzW}
 
 Solution: I set the exact permissions using numeric (octal) values with `chmod` and accessed the file to find the flag.
 
 ### The SUID Bit
-Flag: 
+Flag: pwn.college{Q9J0i4ax0cqMFXUrCrok0cZE4g3.QXzEjN0wSM2QjM1EzW}
 
-Solution: I identified the file with the SUID bit set, executed it with elevated privileges, and obtained the flag.
+Solution: I identified the file with the SUID bit set, executed it with elevated privileges: chmod u+s /challenge/getroot; /challenge/getroot
 
 # Module 12: Chaining Commands
 
 ### Chaining with Semicolons
-Flag: 
+Flag: pwn.college{sQW77vdePiIcHXaeJP_dMaDr_D5.QX1UDO0wSM2QjM1EzW}
 
-Solution: I chained multiple commands using semicolons (`;`) so they executed sequentially and retrieved the flag.
+Solution: I chained multiple commands using semicolons (`;`) so they executed sequentially: /challenge/pwn; /challenge/college
+
 
 ### Building on Success
-Flag: 
+Flag: pwn.college{0tHwp_MAwrd9qLgs5gPNI09Dih8.0lM0MDOxwSM2QjM1EzW}
 
-Solution: I used `&&` to ensure the next command only ran after the previous one succeeded and obtained the flag.
+Solution: I used `&&` to ensure the next command only ran after the previous one succeeded: /challenge/first-success && /challenge/second
 
 ### Handling Failure
-Flag: 
+Flag: pwn.college{0P6x3jrawgHmYlQ9nywu0NzXlGj.01M0MDOxwSM2QjM1EzW}
 
-Solution: I used `||` so the fallback command executed when the first command failed and found the flag.
+Solution: I used `||` so the fallback command executed when the first command failed: /challenge/first-failure ||  /challenge/second
 
 ### Your First Shell Script
-Flag: 
+Flag: pwn.college{0xaEhxV-Wca3CMhGqIPabgUQyli.QXxcDO0wSM2QjM1EzW}
 
-Solution: I created a basic shell script file, added commands to it, ran the script, and obtained the flag.
+Solution: I created a basic shell script file, added commands to it, ran the script: nano x.sh; bash x.sh
+<img width="158" height="70" alt="image" src="https://github.com/user-attachments/assets/85ffd15e-a2a4-4714-ba0d-9aa6526c9189" />
+
 
 ### Redirecting Script Output
 Flag: 
