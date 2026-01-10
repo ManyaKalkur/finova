@@ -517,29 +517,35 @@ Solution: I created a basic shell script file, added commands to it, ran the scr
 
 
 ### Redirecting Script Output
-Flag: 
+Flag: pwn.college{867bNZY-udZND6yFOu-3ZeVXPxJ.QX4ETO0wSM2QjM1EzW}
 
-Solution: I redirected the script’s output using `>` or `>>` into a file and read it to get the flag.
+Solution: I redirected the script’s output using `>` or `>>` into a file: nano x.sh; bash x.sh | /challenge/solve
 
 ### Executable Shell Scripts
-Flag: 
+Flag: pwn.college{YJcF0wZg8Y4-O4FfIXHSTNWo4EY.QX0cjM1wSM2QjM1EzW}
 
-Solution: I made the script executable using `chmod +x`, executed it directly, and retrieved the flag.
+Solution: I made the script executable using `chmod +x`, executed it directly: nano solve.sh; chmod +x solve.sh; ./solve.sh
+<img width="155" height="55" alt="image" src="https://github.com/user-attachments/assets/dc88354f-9638-479b-b913-879f9967d600" />
+
 
 ### Understanding Shebangs
-Flag: 
+Flag: pwn.college{8grMN-uagXdzn5kkhA1e8NBr2P7.0VOzMDOxwSM2QjM1EzW}
 
-Solution: I added the correct shebang line (`#!/bin/bash`) to the script, ran it successfully, and obtained the flag.
+Solution: I added the correct shebang line (`#!/bin/bash`) to the script, ran it: nano /home/hacker/solve.s; chmod +x /home/hacker/solve.sh; /challenge/run
 
 ### Scripting with Arguments
-Flag: 
+Flag: pwn.college{MbzfrQbkYCUikBj74WR4x9PQ7pF.0VNzMDOxwSM2QjM1EzW}
 
-Solution: I passed arguments to the script using `$1`, `$2`, etc., and used them to display the flag.
+Solution: I passed arguments to the script using nano /home/hacker/solve.sh; nano /home/hacker/solve.sh; /challenge/run
+<img width="142" height="47" alt="image" src="https://github.com/user-attachments/assets/7208b463-19a7-4379-a933-7a025508d398" />
+
 
 ### Scripting with Conditionals
-Flag: 
+Flag: pwn.college{EfSPJFI1gTRb_NlO-dnEeA3RUaB.0lNzMDOxwSM2QjM1EzW}
 
-Solution: I used `if`, `else`, and test conditions in the script to meet the requirement and get the flag.
+Solution: I used nano /home/hacker/solve.sh;chmod +x /home/hacker/solve.sh; /challenge/run
+<img width="211" height="94" alt="image" src="https://github.com/user-attachments/assets/c9be5acf-654e-4e4d-a4de-8aea3d349b9a" />
+
 
 ### Scripting with Default Cases
 Flag: 
